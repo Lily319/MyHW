@@ -58,9 +58,14 @@ namespace MyHomeWork
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.btnLike = new System.Windows.Forms.Button();
             this.lblResult = new System.Windows.Forms.Label();
+            this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.nwDataSet1 = new MyHW.NWDataSet();
+            this.productsTableAdapter1 = new MyHW.NWDataSetTableAdapters.ProductsTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
             this.bindingNavigator1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nwDataSet1)).BeginInit();
             this.SuspendLayout();
             // 
             // label5
@@ -82,6 +87,7 @@ namespace MyHomeWork
             this.btBetween.TabIndex = 29;
             this.btBetween.Text = "Search";
             this.btBetween.UseVisualStyleBackColor = true;
+            this.btBetween.Click += new System.EventHandler(this.btBetween_Click);
             // 
             // label4
             // 
@@ -247,33 +253,36 @@ namespace MyHomeWork
             // lblPosition
             // 
             this.lblPosition.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblPosition.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPosition.Location = new System.Drawing.Point(165, 81);
             this.lblPosition.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblPosition.Name = "lblPosition";
-            this.lblPosition.Size = new System.Drawing.Size(47, 38);
+            this.lblPosition.Size = new System.Drawing.Size(56, 38);
             this.lblPosition.TabIndex = 39;
-            this.lblPosition.Text = "1/100";
+            this.lblPosition.Text = "0/00";
             this.lblPosition.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btnLast
             // 
-            this.btnLast.Location = new System.Drawing.Point(265, 81);
+            this.btnLast.Location = new System.Drawing.Point(275, 81);
             this.btnLast.Margin = new System.Windows.Forms.Padding(2);
             this.btnLast.Name = "btnLast";
             this.btnLast.Size = new System.Drawing.Size(46, 37);
             this.btnLast.TabIndex = 38;
             this.btnLast.Text = ">>";
             this.btnLast.UseVisualStyleBackColor = true;
+            this.btnLast.Click += new System.EventHandler(this.btnLast_Click);
             // 
             // btnNext
             // 
-            this.btnNext.Location = new System.Drawing.Point(215, 81);
+            this.btnNext.Location = new System.Drawing.Point(225, 81);
             this.btnNext.Margin = new System.Windows.Forms.Padding(2);
             this.btnNext.Name = "btnNext";
             this.btnNext.Size = new System.Drawing.Size(46, 37);
             this.btnNext.TabIndex = 37;
             this.btnNext.Text = ">";
             this.btnNext.UseVisualStyleBackColor = true;
+            this.btnNext.Click += new System.EventHandler(this.btnNext_Click);
             // 
             // btnLastone
             // 
@@ -284,6 +293,7 @@ namespace MyHomeWork
             this.btnLastone.TabIndex = 36;
             this.btnLastone.Text = "<";
             this.btnLastone.UseVisualStyleBackColor = true;
+            this.btnLastone.Click += new System.EventHandler(this.btnLastone_Click);
             // 
             // btnFirst
             // 
@@ -304,7 +314,7 @@ namespace MyHomeWork
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 62;
             this.dataGridView1.RowTemplate.Height = 31;
-            this.dataGridView1.Size = new System.Drawing.Size(492, 162);
+            this.dataGridView1.Size = new System.Drawing.Size(645, 171);
             this.dataGridView1.TabIndex = 41;
             // 
             // btnLike
@@ -316,6 +326,7 @@ namespace MyHomeWork
             this.btnLike.TabIndex = 42;
             this.btnLike.Text = "Search";
             this.btnLike.UseVisualStyleBackColor = true;
+            this.btnLike.Click += new System.EventHandler(this.btnLike_Click);
             // 
             // lblResult
             // 
@@ -329,7 +340,19 @@ namespace MyHomeWork
             this.lblResult.Size = new System.Drawing.Size(216, 34);
             this.lblResult.TabIndex = 94;
             this.lblResult.Text = "結果 XXX 幾筆";
-            this.lblResult.Click += new System.EventHandler(this.lblResult_Click);
+            // 
+            // bindingSource1
+            // 
+            this.bindingSource1.CurrentChanged += new System.EventHandler(this.bindingSource1_CurrentChanged);
+            // 
+            // nwDataSet1
+            // 
+            this.nwDataSet1.DataSetName = "NWDataSet";
+            this.nwDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // productsTableAdapter1
+            // 
+            this.productsTableAdapter1.ClearBeforeFill = true;
             // 
             // FrmProducts
             // 
@@ -359,6 +382,8 @@ namespace MyHomeWork
             this.bindingNavigator1.ResumeLayout(false);
             this.bindingNavigator1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nwDataSet1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -392,5 +417,8 @@ namespace MyHomeWork
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button btnLike;
         private System.Windows.Forms.Label lblResult;
+        private MyHW.NWDataSet nwDataSet1;
+        private MyHW.NWDataSetTableAdapters.ProductsTableAdapter productsTableAdapter1;
+        private System.Windows.Forms.BindingSource bindingSource1;
     }
 }
