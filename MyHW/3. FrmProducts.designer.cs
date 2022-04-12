@@ -76,7 +76,7 @@ namespace MyHomeWork
             // btBetween
             // 
             this.btBetween.Location = new System.Drawing.Point(365, 9);
-            this.btBetween.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btBetween.Margin = new System.Windows.Forms.Padding(2);
             this.btBetween.Name = "btBetween";
             this.btBetween.Size = new System.Drawing.Size(70, 20);
             this.btBetween.TabIndex = 29;
@@ -96,7 +96,7 @@ namespace MyHomeWork
             // txtMax
             // 
             this.txtMax.Location = new System.Drawing.Point(258, 8);
-            this.txtMax.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtMax.Margin = new System.Windows.Forms.Padding(2);
             this.txtMax.Name = "txtMax";
             this.txtMax.Size = new System.Drawing.Size(68, 22);
             this.txtMax.TabIndex = 27;
@@ -104,7 +104,7 @@ namespace MyHomeWork
             // txtMin
             // 
             this.txtMin.Location = new System.Drawing.Point(147, 9);
-            this.txtMin.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtMin.Margin = new System.Windows.Forms.Padding(2);
             this.txtMin.Name = "txtMin";
             this.txtMin.Size = new System.Drawing.Size(68, 22);
             this.txtMin.TabIndex = 26;
@@ -122,7 +122,7 @@ namespace MyHomeWork
             // txtLike
             // 
             this.txtLike.Location = new System.Drawing.Point(147, 41);
-            this.txtLike.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtLike.Margin = new System.Windows.Forms.Padding(2);
             this.txtLike.Name = "txtLike";
             this.txtLike.Size = new System.Drawing.Size(179, 22);
             this.txtLike.TabIndex = 34;
@@ -258,7 +258,7 @@ namespace MyHomeWork
             // btnLast
             // 
             this.btnLast.Location = new System.Drawing.Point(265, 81);
-            this.btnLast.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnLast.Margin = new System.Windows.Forms.Padding(2);
             this.btnLast.Name = "btnLast";
             this.btnLast.Size = new System.Drawing.Size(46, 37);
             this.btnLast.TabIndex = 38;
@@ -268,7 +268,7 @@ namespace MyHomeWork
             // btnNext
             // 
             this.btnNext.Location = new System.Drawing.Point(215, 81);
-            this.btnNext.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnNext.Margin = new System.Windows.Forms.Padding(2);
             this.btnNext.Name = "btnNext";
             this.btnNext.Size = new System.Drawing.Size(46, 37);
             this.btnNext.TabIndex = 37;
@@ -278,7 +278,7 @@ namespace MyHomeWork
             // btnLastone
             // 
             this.btnLastone.Location = new System.Drawing.Point(115, 81);
-            this.btnLastone.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnLastone.Margin = new System.Windows.Forms.Padding(2);
             this.btnLastone.Name = "btnLastone";
             this.btnLastone.Size = new System.Drawing.Size(46, 37);
             this.btnLastone.TabIndex = 36;
@@ -288,7 +288,7 @@ namespace MyHomeWork
             // btnFirst
             // 
             this.btnFirst.Location = new System.Drawing.Point(65, 81);
-            this.btnFirst.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnFirst.Margin = new System.Windows.Forms.Padding(2);
             this.btnFirst.Name = "btnFirst";
             this.btnFirst.Size = new System.Drawing.Size(46, 37);
             this.btnFirst.TabIndex = 35;
@@ -300,7 +300,7 @@ namespace MyHomeWork
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(57, 138);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 62;
             this.dataGridView1.RowTemplate.Height = 31;
@@ -310,7 +310,7 @@ namespace MyHomeWork
             // btnLike
             // 
             this.btnLike.Location = new System.Drawing.Point(365, 43);
-            this.btnLike.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnLike.Margin = new System.Windows.Forms.Padding(2);
             this.btnLike.Name = "btnLike";
             this.btnLike.Size = new System.Drawing.Size(70, 20);
             this.btnLike.TabIndex = 42;
@@ -329,6 +329,7 @@ namespace MyHomeWork
             this.lblResult.Size = new System.Drawing.Size(216, 34);
             this.lblResult.TabIndex = 94;
             this.lblResult.Text = "結果 XXX 幾筆";
+            this.lblResult.Click += new System.EventHandler(this.lblResult_Click);
             // 
             // FrmProducts
             // 
@@ -351,7 +352,7 @@ namespace MyHomeWork
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txtMax);
             this.Controls.Add(this.txtMin);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FrmProducts";
             this.Text = "FrmProducts";
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).EndInit();
