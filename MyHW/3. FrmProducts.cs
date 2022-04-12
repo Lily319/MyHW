@@ -50,10 +50,19 @@ namespace MyHomeWork
 
         private void btBetween_Click(object sender, EventArgs e)
         {
-            productsTableAdapter1.FillByBetween(nwDataSet1.Products,int.Parse(txtMin.Text),int.Parse(txtMax.Text));
+            bool MinisNum = int.TryParse(txtMin.Text, out int min);
+            bool MaxisNum = int.TryParse(txtMax.Text, out int Max);
+            if (MaxisNum && MinisNum)
+            {
+            productsTableAdapter1.FillByBetween(nwDataSet1.Products,min,Max);
             bindingSource1.DataSource = nwDataSet1.Products;
             dataGridView1.DataSource = bindingSource1;
             bindingNavigator1.BindingSource = bindingSource1;
+            }
+            else
+            {
+                MessageBox.Show("請輸入整數值!");
+            }
         }
 
         private void btnLike_Click(object sender, EventArgs e)

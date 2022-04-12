@@ -19,7 +19,7 @@ namespace MyHW
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmCategoryProducts3());
+            Application.Run(new FrmProducts());
         }
     }
 }
