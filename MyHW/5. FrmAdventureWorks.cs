@@ -76,7 +76,7 @@ namespace MyHomeWork
             bindingNavigator1.BindingSource = bindingSource1;
         }
 
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)//"2/16/2008 12:15:12 PM"
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             min = DateTime.Parse("1/01/" + comboBox1.Text + " 00:00:00 AM");
             Max = DateTime.Parse("12/31/" + comboBox1.Text + " 11:59:59 PM");
