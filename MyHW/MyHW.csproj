@@ -175,9 +175,9 @@
       <DependentUpon>MyAlbumDataSet.xsd</DependentUpon>
     </None>
     <None Include="MyAlbumDataSet.xsd">
+      <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>MyAlbumDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
     </None>
     <None Include="MyAlbumDataSet.xss">
       <DependentUpon>MyAlbumDataSet.xsd</DependentUpon>

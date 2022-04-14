@@ -16,13 +16,14 @@ namespace MyHW
         {
             InitializeComponent();
 
-            myAlbumTableAdapter.FillByCity(myAlbumDataSet.MyAlbum);
+            cityTableAdapter1.Fill(myAlbumDataSet1.City);
 
-            for (int i = 0; i < myAlbumDataSet.MyAlbum.Rows.Count; i++)
+            for (int i = 0; i < myAlbumDataSet1.City.Rows.Count; i++)
             {
                 LinkLabel l = new LinkLabel();
-                l.Text = myAlbumDataSet.MyAlbum[i].City;
+                l.Text = myAlbumDataSet1.City[i].CityName;//myAlbumDataSet.MyAlbum[i].City;
                 l.Top = i * 40;
+                l.Left = 0;
                 this.panel1.Controls.Add(l);
                 l.Click += L_Click;
             }
@@ -30,17 +31,18 @@ namespace MyHW
 
         private void L_Click(object sender, EventArgs e)
         {
-            myAlbumTableAdapter.FillByCityImage(myAlbumDataSet.MyAlbum,((LinkLabel)sender).Text);
-            myAlbumBindingSource.DataSource = myAlbumDataSet.MyAlbum;
-            myAlbumDataGridView.DataSource = myAlbumBindingSource;
-            myAlbumBindingNavigator.BindingSource = myAlbumBindingSource;
-        }
-
-        private void myAlbumBindingNavigatorSaveItem_Click(object sender, EventArgs e)
-        {
-            this.Validate();
-            this.myAlbumBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.myAlbumDataSet);
+            myAlbumTableAdapter1.FillByJoin(myAlbumDataSet1.MyAlbum, ((LinkLabel)sender).Text);
+            bindingSource1.DataSource = myAlbumDataSet1.MyAlbum;
+            dataGridView1.DataSource = bindingSource1;
+            bindingNavigator1.BindingSource = bindingSource1;
+            cityNameTextBox.DataBindings.Clear();
+            cityNameTextBox.DataBindings.Add("Text", bindingSource1, "CityName");
+            idTextBox.DataBindings.Clear();
+            idTextBox.DataBindings.Add("Text",bindingSource1,"Id");
+            descriptionTextBox.DataBindings.Clear();
+            descriptionTextBox.DataBindings.Add("Text",bindingSource1, "Description");
+            imagePictureBox.DataBindings.Clear();
+            imagePictureBox.DataBindings.Add("Image",bindingSource1,"Image",true);
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -52,9 +54,11 @@ namespace MyHW
             }
         }
 
-        private void FrmMyAlbum_V1_Load(object sender, EventArgs e)
+        private void cityBindingNavigatorSaveItem_Click(object sender, EventArgs e)
         {
-            this.myAlbumTableAdapter.Fill(this.myAlbumDataSet.MyAlbum);
+            this.Validate();
+            this.bindingSource1.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.myAlbumDataSet1);
         }
     }
 }
