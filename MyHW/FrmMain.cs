@@ -143,7 +143,7 @@ namespace MyHW
         {
             splitContainer2.Panel2.Controls.Clear();
             IsMdiContainer = true;
-            FrmCustomers f = new FrmCustomers()
+            FrmLogon f = new FrmLogon()
             {
                 MdiParent = this,
                 Parent = splitContainer2.Panel2,
