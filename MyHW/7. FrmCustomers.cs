@@ -15,6 +15,13 @@ namespace MyHW
         public FrmCustomers()
         {
             InitializeComponent();
+
+
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

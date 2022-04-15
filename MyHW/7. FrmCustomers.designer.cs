@@ -49,29 +49,30 @@ namespace MyHW
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(193, 38);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.comboBox1.Location = new System.Drawing.Point(172, 32);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(222, 26);
+            this.comboBox1.Size = new System.Drawing.Size(198, 23);
             this.comboBox1.TabIndex = 4;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(93, 46);
+            this.label1.Location = new System.Drawing.Point(83, 38);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(67, 18);
+            this.label1.Size = new System.Drawing.Size(57, 15);
             this.label1.TabIndex = 2;
             this.label1.Text = "Country:";
             // 
             // listView1
             // 
             this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(96, 117);
-            this.listView1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.listView1.Location = new System.Drawing.Point(85, 97);
+            this.listView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(801, 349);
+            this.listView1.Size = new System.Drawing.Size(712, 291);
             this.listView1.TabIndex = 3;
             this.listView1.UseCompatibleStateImageBehavior = false;
             // 
@@ -85,24 +86,24 @@ namespace MyHW
             this.orderByToolStripMenuItem,
             this.groupByToolStripMenuItem});
             this.contextMenuStrip2.Name = "contextMenuStrip1";
-            this.contextMenuStrip2.Size = new System.Drawing.Size(186, 154);
+            this.contextMenuStrip2.Size = new System.Drawing.Size(164, 124);
             // 
             // toolStripMenuItem1
             // 
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(185, 30);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(163, 24);
             this.toolStripMenuItem1.Text = "Details View";
             // 
             // toolStripMenuItem2
             // 
             this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(185, 30);
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(163, 24);
             this.toolStripMenuItem2.Text = "Large Icon";
             // 
             // toolStripMenuItem3
             // 
             this.toolStripMenuItem3.Name = "toolStripMenuItem3";
-            this.toolStripMenuItem3.Size = new System.Drawing.Size(185, 30);
+            this.toolStripMenuItem3.Size = new System.Drawing.Size(163, 24);
             this.toolStripMenuItem3.Text = "Small Icon";
             // 
             // orderByToolStripMenuItem
@@ -111,19 +112,19 @@ namespace MyHW
             this.customerIDAscToolStripMenuItem,
             this.customerIDDescToolStripMenuItem});
             this.orderByToolStripMenuItem.Name = "orderByToolStripMenuItem";
-            this.orderByToolStripMenuItem.Size = new System.Drawing.Size(185, 30);
+            this.orderByToolStripMenuItem.Size = new System.Drawing.Size(163, 24);
             this.orderByToolStripMenuItem.Text = "Order by";
             // 
             // customerIDAscToolStripMenuItem
             // 
             this.customerIDAscToolStripMenuItem.Name = "customerIDAscToolStripMenuItem";
-            this.customerIDAscToolStripMenuItem.Size = new System.Drawing.Size(258, 34);
+            this.customerIDAscToolStripMenuItem.Size = new System.Drawing.Size(212, 26);
             this.customerIDAscToolStripMenuItem.Text = "CustomerID Asc";
             // 
             // customerIDDescToolStripMenuItem
             // 
             this.customerIDDescToolStripMenuItem.Name = "customerIDDescToolStripMenuItem";
-            this.customerIDDescToolStripMenuItem.Size = new System.Drawing.Size(258, 34);
+            this.customerIDDescToolStripMenuItem.Size = new System.Drawing.Size(212, 26);
             this.customerIDDescToolStripMenuItem.Text = "CustomerID Desc";
             // 
             // groupByToolStripMenuItem
@@ -132,30 +133,32 @@ namespace MyHW
             this.countryToolStripMenuItem,
             this.無ToolStripMenuItem});
             this.groupByToolStripMenuItem.Name = "groupByToolStripMenuItem";
-            this.groupByToolStripMenuItem.Size = new System.Drawing.Size(185, 30);
+            this.groupByToolStripMenuItem.Size = new System.Drawing.Size(163, 24);
             this.groupByToolStripMenuItem.Text = "Group by";
             // 
             // countryToolStripMenuItem
             // 
             this.countryToolStripMenuItem.Name = "countryToolStripMenuItem";
-            this.countryToolStripMenuItem.Size = new System.Drawing.Size(178, 34);
+            this.countryToolStripMenuItem.Size = new System.Drawing.Size(148, 26);
             this.countryToolStripMenuItem.Text = "Country";
             // 
             // 無ToolStripMenuItem
             // 
             this.無ToolStripMenuItem.Name = "無ToolStripMenuItem";
-            this.無ToolStripMenuItem.Size = new System.Drawing.Size(178, 34);
+            this.無ToolStripMenuItem.Size = new System.Drawing.Size(148, 26);
             this.無ToolStripMenuItem.Text = "無";
             // 
             // FrmCustomers
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1016, 632);
+            this.ClientSize = new System.Drawing.Size(903, 527);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.listView1);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FrmCustomers";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmCustomers";
             this.contextMenuStrip2.ResumeLayout(false);
             this.ResumeLayout(false);
