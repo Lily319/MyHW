@@ -21,7 +21,7 @@ namespace MyHW
             for (int i = 0; i < myAlbumDataSet1.City.Rows.Count; i++)
             {
                 LinkLabel l = new LinkLabel();
-                l.Text = myAlbumDataSet1.City[i].CityName;//myAlbumDataSet.MyAlbum[i].City;
+                l.Text = myAlbumDataSet1.City[i].CityName;
                 l.Top = i * 40;
                 l.Left = 0;
                 this.panel1.Controls.Add(l);
