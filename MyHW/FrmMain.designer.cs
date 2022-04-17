@@ -31,6 +31,7 @@ namespace MyHW
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMain));
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.labelTitle = new System.Windows.Forms.Label();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
             this.btn2_1 = new System.Windows.Forms.Button();
             this.btn2_2 = new System.Windows.Forms.Button();
@@ -41,7 +42,6 @@ namespace MyHW
             this.btn7 = new System.Windows.Forms.Button();
             this.btn4 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.labelTitle = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -70,6 +70,19 @@ namespace MyHW
             this.splitContainer1.Size = new System.Drawing.Size(1213, 761);
             this.splitContainer1.SplitterDistance = 118;
             this.splitContainer1.TabIndex = 0;
+            // 
+            // labelTitle
+            // 
+            this.labelTitle.AutoSize = true;
+            this.labelTitle.BackColor = System.Drawing.Color.Transparent;
+            this.labelTitle.Font = new System.Drawing.Font("微軟正黑體", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.labelTitle.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.labelTitle.Location = new System.Drawing.Point(91, 53);
+            this.labelTitle.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelTitle.Name = "labelTitle";
+            this.labelTitle.Size = new System.Drawing.Size(241, 43);
+            this.labelTitle.TabIndex = 1;
+            this.labelTitle.Text = "ADO.NET作業";
             // 
             // splitContainer2
             // 
@@ -120,7 +133,7 @@ namespace MyHW
             this.btn2_2.Name = "btn2_2";
             this.btn2_2.Size = new System.Drawing.Size(277, 35);
             this.btn2_2.TabIndex = 7;
-            this.btn2_2.Text = "2. FrmCategoryProducts_Dis";
+            this.btn2_2.Text = "2. FrmCategoryProducts_TA";
             this.btn2_2.UseVisualStyleBackColor = false;
             this.btn2_2.Click += new System.EventHandler(this.btn2_2_Click);
             // 
@@ -133,7 +146,7 @@ namespace MyHW
             this.btn2_3.Name = "btn2_3";
             this.btn2_3.Size = new System.Drawing.Size(277, 35);
             this.btn2_3.TabIndex = 6;
-            this.btn2_3.Text = "2. FrmCategoryProducts_TA";
+            this.btn2_3.Text = "2. FrmCategoryProducts_DS";
             this.btn2_3.UseVisualStyleBackColor = false;
             this.btn2_3.Click += new System.EventHandler(this.btn2_3_Click);
             // 
@@ -214,19 +227,6 @@ namespace MyHW
             this.button1.Text = "1. Frm標準練習";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // labelTitle
-            // 
-            this.labelTitle.AutoSize = true;
-            this.labelTitle.BackColor = System.Drawing.Color.Transparent;
-            this.labelTitle.Font = new System.Drawing.Font("微軟正黑體", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.labelTitle.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.labelTitle.Location = new System.Drawing.Point(91, 53);
-            this.labelTitle.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.labelTitle.Name = "labelTitle";
-            this.labelTitle.Size = new System.Drawing.Size(241, 43);
-            this.labelTitle.TabIndex = 1;
-            this.labelTitle.Text = "ADO.NET作業";
             // 
             // FrmMain
             // 

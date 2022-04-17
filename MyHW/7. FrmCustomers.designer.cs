@@ -43,17 +43,22 @@ namespace MyHW
             this.groupByToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.countryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.無ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.nwDataSet1 = new MyHW.NWDataSet();
+            this.customers1TableAdapter1 = new MyHW.NWDataSetTableAdapters.Customers1TableAdapter();
+            this.customersTableAdapter1 = new MyHW.NWDataSetTableAdapters.CustomersTableAdapter();
             this.contextMenuStrip2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nwDataSet1)).BeginInit();
             this.SuspendLayout();
             // 
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(172, 32);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(198, 23);
             this.comboBox1.TabIndex = 4;
+            this.comboBox1.Text = "請選擇";
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // label1
@@ -68,9 +73,13 @@ namespace MyHW
             // 
             // listView1
             // 
+            this.listView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.listView1.ContextMenuStrip = this.contextMenuStrip2;
             this.listView1.HideSelection = false;
             this.listView1.Location = new System.Drawing.Point(85, 97);
-            this.listView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.listView1.Margin = new System.Windows.Forms.Padding(4);
             this.listView1.Name = "listView1";
             this.listView1.Size = new System.Drawing.Size(712, 291);
             this.listView1.TabIndex = 3;
@@ -93,18 +102,21 @@ namespace MyHW
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
             this.toolStripMenuItem1.Size = new System.Drawing.Size(163, 24);
             this.toolStripMenuItem1.Text = "Details View";
+            this.toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
             // 
             // toolStripMenuItem2
             // 
             this.toolStripMenuItem2.Name = "toolStripMenuItem2";
             this.toolStripMenuItem2.Size = new System.Drawing.Size(163, 24);
             this.toolStripMenuItem2.Text = "Large Icon";
+            this.toolStripMenuItem2.Click += new System.EventHandler(this.toolStripMenuItem2_Click);
             // 
             // toolStripMenuItem3
             // 
             this.toolStripMenuItem3.Name = "toolStripMenuItem3";
             this.toolStripMenuItem3.Size = new System.Drawing.Size(163, 24);
             this.toolStripMenuItem3.Text = "Small Icon";
+            this.toolStripMenuItem3.Click += new System.EventHandler(this.toolStripMenuItem3_Click);
             // 
             // orderByToolStripMenuItem
             // 
@@ -118,14 +130,16 @@ namespace MyHW
             // customerIDAscToolStripMenuItem
             // 
             this.customerIDAscToolStripMenuItem.Name = "customerIDAscToolStripMenuItem";
-            this.customerIDAscToolStripMenuItem.Size = new System.Drawing.Size(212, 26);
+            this.customerIDAscToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.customerIDAscToolStripMenuItem.Text = "CustomerID Asc";
+            this.customerIDAscToolStripMenuItem.Click += new System.EventHandler(this.customerIDAscToolStripMenuItem_Click);
             // 
             // customerIDDescToolStripMenuItem
             // 
             this.customerIDDescToolStripMenuItem.Name = "customerIDDescToolStripMenuItem";
-            this.customerIDDescToolStripMenuItem.Size = new System.Drawing.Size(212, 26);
+            this.customerIDDescToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.customerIDDescToolStripMenuItem.Text = "CustomerID Desc";
+            this.customerIDDescToolStripMenuItem.Click += new System.EventHandler(this.customerIDDescToolStripMenuItem_Click);
             // 
             // groupByToolStripMenuItem
             // 
@@ -148,6 +162,19 @@ namespace MyHW
             this.無ToolStripMenuItem.Size = new System.Drawing.Size(148, 26);
             this.無ToolStripMenuItem.Text = "無";
             // 
+            // nwDataSet1
+            // 
+            this.nwDataSet1.DataSetName = "NWDataSet";
+            this.nwDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // customers1TableAdapter1
+            // 
+            this.customers1TableAdapter1.ClearBeforeFill = true;
+            // 
+            // customersTableAdapter1
+            // 
+            this.customersTableAdapter1.ClearBeforeFill = true;
+            // 
             // FrmCustomers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
@@ -161,6 +188,7 @@ namespace MyHW
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmCustomers";
             this.contextMenuStrip2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.nwDataSet1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -181,5 +209,8 @@ namespace MyHW
         private System.Windows.Forms.ToolStripMenuItem groupByToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem countryToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 無ToolStripMenuItem;
+        private NWDataSet nwDataSet1;
+        private NWDataSetTableAdapters.Customers1TableAdapter customers1TableAdapter1;
+        private NWDataSetTableAdapters.CustomersTableAdapter customersTableAdapter1;
     }
 }

@@ -141,6 +141,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>MyAlbumDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="NWDataSet.cs">
+      <DependentUpon>NWDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="NWDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
