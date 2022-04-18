@@ -123,7 +123,7 @@ namespace MyHW
             else
             {
                 listView1.Items.Clear();
-                customersTableAdapter1.FillByCOrderbyID(nwDataSet1.Customers, WhichCountry);
+                customersTableAdapter1.FillByC_OrderbyID(nwDataSet1.Customers, WhichCountry);
                 for (int i = 0; i < nwDataSet1.Customers.Rows.Count; i++)
                 {
                     ListViewItem lsv = listView1.Items.Add(nwDataSet1.Customers.Rows[i][0].ToString());
@@ -153,7 +153,7 @@ namespace MyHW
             else
             {
                 listView1.Items.Clear();
-                customersTableAdapter1.FillByCountry_IDDESC(nwDataSet1.Customers, WhichCountry);
+                customersTableAdapter1.FillByC_IDDESC(nwDataSet1.Customers, WhichCountry);
                 for (int i = 0; i < nwDataSet1.Customers.Rows.Count; i++)
                 {
                     ListViewItem lsv = listView1.Items.Add(nwDataSet1.Customers.Rows[i][0].ToString());

@@ -3907,20 +3907,20 @@ SELECT CustomerID, CompanyName, ContactName, ContactTitle, Address, City, Region
             this._commandCollection[1].Connection = this.Connection;
             this._commandCollection[1].CommandText = "SELECT CustomerID, CompanyName, ContactName, ContactTitle, Address, City, Region," +
                 " PostalCode, Country, Phone, Fax FROM dbo.Customers where country = @Country ord" +
-                "er by CustomerID";
+                "er by CustomerID DESC";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Country", global::System.Data.SqlDbType.NVarChar, 15, global::System.Data.ParameterDirection.Input, 0, 0, "Country", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[2] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[2].Connection = this.Connection;
             this._commandCollection[2].CommandText = "SELECT CustomerID, CompanyName, ContactName, ContactTitle, Address, City, Region," +
-                " PostalCode, Country, Phone, Fax FROM dbo.Customers where country = @Country";
+                " PostalCode, Country, Phone, Fax FROM dbo.Customers where country = @Country ord" +
+                "er by CustomerID";
             this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Country", global::System.Data.SqlDbType.NVarChar, 15, global::System.Data.ParameterDirection.Input, 0, 0, "Country", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[3] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[3].Connection = this.Connection;
             this._commandCollection[3].CommandText = "SELECT CustomerID, CompanyName, ContactName, ContactTitle, Address, City, Region," +
-                " PostalCode, Country, Phone, Fax FROM dbo.Customers where country = @Country ord" +
-                "er by CustomerID DESC";
+                " PostalCode, Country, Phone, Fax FROM dbo.Customers where country = @Country";
             this._commandCollection[3].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Country", global::System.Data.SqlDbType.NVarChar, 15, global::System.Data.ParameterDirection.Input, 0, 0, "Country", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[4] = new global::System.Data.SqlClient.SqlCommand();
@@ -3963,7 +3963,7 @@ SELECT CustomerID, CompanyName, ContactName, ContactTitle, Address, City, Region
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
-        public virtual int FillByCOrderbyID(NWDataSet.CustomersDataTable dataTable, string Country) {
+        public virtual int FillByC_IDDESC(NWDataSet.CustomersDataTable dataTable, string Country) {
             this.Adapter.SelectCommand = this.CommandCollection[1];
             if ((Country == null)) {
                 this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
@@ -3982,8 +3982,44 @@ SELECT CustomerID, CompanyName, ContactName, ContactTitle, Address, City, Region
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
-        public virtual NWDataSet.CustomersDataTable GetDataByCOrderbyID(string Country) {
+        public virtual NWDataSet.CustomersDataTable GetDtByC_IDDESC(string Country) {
             this.Adapter.SelectCommand = this.CommandCollection[1];
+            if ((Country == null)) {
+                this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(Country));
+            }
+            NWDataSet.CustomersDataTable dataTable = new NWDataSet.CustomersDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+        public virtual int FillByC_OrderbyID(NWDataSet.CustomersDataTable dataTable, string Country) {
+            this.Adapter.SelectCommand = this.CommandCollection[2];
+            if ((Country == null)) {
+                this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(Country));
+            }
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
+        public virtual NWDataSet.CustomersDataTable GetDataByC_OrderbyID(string Country) {
+            this.Adapter.SelectCommand = this.CommandCollection[2];
             if ((Country == null)) {
                 this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
@@ -4000,42 +4036,6 @@ SELECT CustomerID, CompanyName, ContactName, ContactTitle, Address, City, Region
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
         public virtual int FillByCountry(NWDataSet.CustomersDataTable dataTable, string Country) {
-            this.Adapter.SelectCommand = this.CommandCollection[2];
-            if ((Country == null)) {
-                this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(Country));
-            }
-            if ((this.ClearBeforeFill == true)) {
-                dataTable.Clear();
-            }
-            int returnValue = this.Adapter.Fill(dataTable);
-            return returnValue;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
-        public virtual NWDataSet.CustomersDataTable GetDataByCountry(string Country) {
-            this.Adapter.SelectCommand = this.CommandCollection[2];
-            if ((Country == null)) {
-                this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(Country));
-            }
-            NWDataSet.CustomersDataTable dataTable = new NWDataSet.CustomersDataTable();
-            this.Adapter.Fill(dataTable);
-            return dataTable;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
-        public virtual int FillByCountry_IDDESC(NWDataSet.CustomersDataTable dataTable, string Country) {
             this.Adapter.SelectCommand = this.CommandCollection[3];
             if ((Country == null)) {
                 this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
@@ -4054,7 +4054,7 @@ SELECT CustomerID, CompanyName, ContactName, ContactTitle, Address, City, Region
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
-        public virtual NWDataSet.CustomersDataTable GetDtByCountry_IDDESC(string Country) {
+        public virtual NWDataSet.CustomersDataTable GetDataByCountry(string Country) {
             this.Adapter.SelectCommand = this.CommandCollection[3];
             if ((Country == null)) {
                 this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
