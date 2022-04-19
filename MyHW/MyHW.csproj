@@ -104,11 +104,11 @@
     <Compile Include="5. FrmAdventureWorks.designer.cs">
       <DependentUpon>5. FrmAdventureWorks.cs</DependentUpon>
     </Compile>
-    <Compile Include="6. FrmMyAlbum_V1.cs">
+    <Compile Include="6. FrmMyAlbum_V2.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="6. FrmMyAlbum_V1.designer.cs">
-      <DependentUpon>6. FrmMyAlbum_V1.cs</DependentUpon>
+    <Compile Include="6. FrmMyAlbum_V2.designer.cs">
+      <DependentUpon>6. FrmMyAlbum_V2.cs</DependentUpon>
     </Compile>
     <Compile Include="7. FrmCustomers.cs">
       <SubType>Form</SubType>
@@ -132,6 +132,18 @@
     </Compile>
     <Compile Include="FrmMain.designer.cs">
       <DependentUpon>FrmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="8. FrmTreeView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="8. FrmTreeView.Designer.cs">
+      <DependentUpon>8. FrmTreeView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="6.FrmShowImage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="6.FrmShowImage.Designer.cs">
+      <DependentUpon>6.FrmShowImage.cs</DependentUpon>
     </Compile>
     <Compile Include="MyAlbumDataSet.cs">
       <DependentUpon>MyAlbumDataSet.xsd</DependentUpon>
@@ -172,8 +184,8 @@
     <EmbeddedResource Include="5. FrmAdventureWorks.resx">
       <DependentUpon>5. FrmAdventureWorks.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="6. FrmMyAlbum_V1.resx">
-      <DependentUpon>6. FrmMyAlbum_V1.cs</DependentUpon>
+    <EmbeddedResource Include="6. FrmMyAlbum_V2.resx">
+      <DependentUpon>6. FrmMyAlbum_V2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="7. FrmCustomers.resx">
       <DependentUpon>7. FrmCustomers.cs</DependentUpon>
@@ -183,6 +195,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmMain.resx">
       <DependentUpon>FrmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="8. FrmTreeView.resx">
+      <DependentUpon>8. FrmTreeView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

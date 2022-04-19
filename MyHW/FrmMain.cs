@@ -153,5 +153,20 @@ namespace MyHW
             f.Show();
             f.BringToFront();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            splitContainer2.Panel2.Controls.Clear();
+            IsMdiContainer = true;
+            FrmTreeView f = new FrmTreeView()
+            {
+                MdiParent = this,
+                Parent = splitContainer2.Panel2,
+                TopLevel = false,
+            };
+            this.splitContainer2.Panel2.Controls.Add(f);
+            f.Show();
+            f.BringToFront();
+        }
     }
 }

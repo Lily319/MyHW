@@ -42,6 +42,7 @@ namespace MyHW
             this.btn7 = new System.Windows.Forms.Button();
             this.btn4 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -55,7 +56,7 @@ namespace MyHW
             // 
             this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.splitContainer1.Location = new System.Drawing.Point(0, 0);
-            this.splitContainer1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.splitContainer1.Margin = new System.Windows.Forms.Padding(2);
             this.splitContainer1.Name = "splitContainer1";
             this.splitContainer1.Orientation = System.Windows.Forms.Orientation.Horizontal;
             // 
@@ -89,7 +90,7 @@ namespace MyHW
             // 
             this.splitContainer2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.splitContainer2.Location = new System.Drawing.Point(0, 0);
-            this.splitContainer2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.splitContainer2.Margin = new System.Windows.Forms.Padding(2);
             this.splitContainer2.Name = "splitContainer2";
             // 
             // splitContainer2.Panel1
@@ -101,6 +102,7 @@ namespace MyHW
             this.splitContainer2.Panel1.Controls.Add(this.btn6);
             this.splitContainer2.Panel1.Controls.Add(this.btn3);
             this.splitContainer2.Panel1.Controls.Add(this.btn5);
+            this.splitContainer2.Panel1.Controls.Add(this.button2);
             this.splitContainer2.Panel1.Controls.Add(this.btn7);
             this.splitContainer2.Panel1.Controls.Add(this.btn4);
             this.splitContainer2.Panel1.Controls.Add(this.button1);
@@ -120,7 +122,7 @@ namespace MyHW
             this.btn2_1.Font = new System.Drawing.Font("微軟正黑體", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.btn2_1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btn2_1.Location = new System.Drawing.Point(28, 65);
-            this.btn2_1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn2_1.Margin = new System.Windows.Forms.Padding(2);
             this.btn2_1.Name = "btn2_1";
             this.btn2_1.Size = new System.Drawing.Size(208, 28);
             this.btn2_1.TabIndex = 8;
@@ -134,7 +136,7 @@ namespace MyHW
             this.btn2_2.Font = new System.Drawing.Font("微軟正黑體", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.btn2_2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btn2_2.Location = new System.Drawing.Point(28, 129);
-            this.btn2_2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn2_2.Margin = new System.Windows.Forms.Padding(2);
             this.btn2_2.Name = "btn2_2";
             this.btn2_2.Size = new System.Drawing.Size(208, 28);
             this.btn2_2.TabIndex = 7;
@@ -148,7 +150,7 @@ namespace MyHW
             this.btn2_3.Font = new System.Drawing.Font("微軟正黑體", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.btn2_3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btn2_3.Location = new System.Drawing.Point(28, 97);
-            this.btn2_3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn2_3.Margin = new System.Windows.Forms.Padding(2);
             this.btn2_3.Name = "btn2_3";
             this.btn2_3.Size = new System.Drawing.Size(208, 28);
             this.btn2_3.TabIndex = 6;
@@ -162,7 +164,7 @@ namespace MyHW
             this.btn6.Font = new System.Drawing.Font("微軟正黑體", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.btn6.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btn6.Location = new System.Drawing.Point(28, 310);
-            this.btn6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn6.Margin = new System.Windows.Forms.Padding(2);
             this.btn6.Name = "btn6";
             this.btn6.Size = new System.Drawing.Size(208, 28);
             this.btn6.TabIndex = 5;
@@ -176,7 +178,7 @@ namespace MyHW
             this.btn3.Font = new System.Drawing.Font("微軟正黑體", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.btn3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btn3.Location = new System.Drawing.Point(28, 178);
-            this.btn3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn3.Margin = new System.Windows.Forms.Padding(2);
             this.btn3.Name = "btn3";
             this.btn3.Size = new System.Drawing.Size(208, 28);
             this.btn3.TabIndex = 4;
@@ -190,7 +192,7 @@ namespace MyHW
             this.btn5.Font = new System.Drawing.Font("微軟正黑體", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.btn5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btn5.Location = new System.Drawing.Point(28, 266);
-            this.btn5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn5.Margin = new System.Windows.Forms.Padding(2);
             this.btn5.Name = "btn5";
             this.btn5.Size = new System.Drawing.Size(208, 28);
             this.btn5.TabIndex = 3;
@@ -204,7 +206,7 @@ namespace MyHW
             this.btn7.Font = new System.Drawing.Font("微軟正黑體", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.btn7.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btn7.Location = new System.Drawing.Point(28, 354);
-            this.btn7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn7.Margin = new System.Windows.Forms.Padding(2);
             this.btn7.Name = "btn7";
             this.btn7.Size = new System.Drawing.Size(208, 28);
             this.btn7.TabIndex = 2;
@@ -218,7 +220,7 @@ namespace MyHW
             this.btn4.Font = new System.Drawing.Font("微軟正黑體", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.btn4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btn4.Location = new System.Drawing.Point(28, 222);
-            this.btn4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn4.Margin = new System.Windows.Forms.Padding(2);
             this.btn4.Name = "btn4";
             this.btn4.Size = new System.Drawing.Size(208, 28);
             this.btn4.TabIndex = 1;
@@ -232,7 +234,7 @@ namespace MyHW
             this.button1.Font = new System.Drawing.Font("微軟正黑體", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.button1.Location = new System.Drawing.Point(28, 21);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(208, 28);
             this.button1.TabIndex = 0;
@@ -240,13 +242,27 @@ namespace MyHW
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.Plum;
+            this.button2.Font = new System.Drawing.Font("微軟正黑體", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.button2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button2.Location = new System.Drawing.Point(28, 398);
+            this.button2.Margin = new System.Windows.Forms.Padding(2);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(208, 28);
+            this.button2.TabIndex = 2;
+            this.button2.Text = "TreeView";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // FrmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(910, 609);
             this.Controls.Add(this.splitContainer1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FrmMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "FrmMain";
@@ -277,5 +293,6 @@ namespace MyHW
         private System.Windows.Forms.Button btn7;
         private System.Windows.Forms.Button btn4;
         private System.Windows.Forms.Label labelTitle;
+        private System.Windows.Forms.Button button2;
     }
 }

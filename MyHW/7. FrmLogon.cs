@@ -68,8 +68,9 @@ namespace MyHomeWork
                     {
                         MessageBox.Show("登入成功");
                         FrmMain frmMain = new FrmMain();
-                        frmMain.Show();
-                        this.Visible = false;
+                        this.Hide();
+                        frmMain.ShowDialog();
+                        Application.ExitThread();
                     }
                     else
                     {
