@@ -67,9 +67,8 @@ namespace MyHomeWork
                     if (reader.HasRows)
                     {
                         MessageBox.Show("登入成功");
-                        FrmCustomers customers = new FrmCustomers();
-                        customers.Show();
-                        this.Close();
+                        FrmMain frmMain = new FrmMain();
+                        frmMain.Show();
                     }
                     else
                     {

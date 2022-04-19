@@ -142,8 +142,16 @@ namespace MyHW
         private void btn7_Click(object sender, EventArgs e)
         {
             splitContainer2.Panel2.Controls.Clear();
-            FrmLogon f = new FrmLogon();
+            IsMdiContainer = true;
+            FrmCustomers f = new FrmCustomers()
+            {
+                MdiParent = this,
+                Parent = splitContainer2.Panel2,
+                TopLevel = false,
+            };
+            this.splitContainer2.Panel2.Controls.Add(f);
             f.Show();
+            f.BringToFront();
         }
     }
 }
