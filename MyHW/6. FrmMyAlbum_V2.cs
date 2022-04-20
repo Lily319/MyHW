@@ -57,6 +57,7 @@ namespace MyHW
             frmShowImage.Controls.Clear();
             frmShowImage.Controls.Add(pb);
             frmShowImage.Show();
+            frmShowImage.BringToFront();
         }
 
         private void button1_Click(object sender, EventArgs e)
