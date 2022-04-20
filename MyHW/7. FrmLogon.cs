@@ -67,10 +67,7 @@ namespace MyHomeWork
                     if (reader.HasRows)
                     {
                         MessageBox.Show("登入成功");
-                        FrmMain frmMain = new FrmMain();
-                        this.Hide();
-                        frmMain.ShowDialog();
-                        Application.ExitThread();
+                        this.DialogResult = DialogResult.OK;
                     }
                     else
                     {

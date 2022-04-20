@@ -28,23 +28,40 @@ namespace MyHW
                 using (SqlConnection conn = new SqlConnection(Settings.Default.NorthwindConnectionString))
                 {
                     conn.Open();
-                    SqlCommand comm = new SqlCommand("select Country,'count'=count(*) from customers group by Country", conn);
+                    SqlCommand comm = new SqlCommand("select distinct Country,City,'count'=count(*) from Customers group by Country,City order by Country", conn);
                     SqlDataReader reader = comm.ExecuteReader();
+                    string country = "";
+                    TreeNode node = null;
+                    int count = 0;
                     while (reader.Read())
                     {
-                        TreeNode node=this.treeView1.Nodes.Add($"{reader["Country"]}({reader["count"]})");
-                        string country = reader["Country"].ToString();
-                        using (SqlConnection conn1 = new SqlConnection(Settings.Default.NorthwindConnectionString))
+                        if (country!= reader["Country"].ToString())
                         {
-                            conn1.Open();
-                            SqlCommand comm1 = new SqlCommand($"select distinct City from customers where country = '{country}'", conn1);
-                            SqlDataReader reader1 = comm1.ExecuteReader();
-                            while (reader1.Read())
-                            {
-                                node.Nodes.Add(reader1["City"].ToString());
-                            }
+                            node = this.treeView1.Nodes.Add($"{reader["Country"]}");
+                            country = reader["Country"].ToString();
+                            count = 0;
                         }
+                        node.Nodes.Add(reader["City"].ToString());
+                        count += (int)reader["count"];
+                        node.Text = $"{country}({count})";
                     }
+                    //SqlCommand comm = new SqlCommand("select Country,'count'=count(*) from customers group by Country", conn);
+                    //SqlDataReader reader = comm.ExecuteReader();
+                    //while (reader.Read())
+                    //{
+                    //    TreeNode node = this.treeView1.Nodes.Add($"{reader["Country"]}({reader["count"]})");
+                    //    string country = reader["Country"].ToString();
+                    //    using (SqlConnection conn1 = new SqlConnection(Settings.Default.NorthwindConnectionString))
+                    //    {
+                    //        conn1.Open();
+                    //        SqlCommand comm1 = new SqlCommand($"select distinct City from customers where country = '{country}'", conn1);
+                    //        SqlDataReader reader1 = comm1.ExecuteReader();
+                    //        while (reader1.Read())
+                    //        {
+                    //            node.Nodes.Add(reader1["City"].ToString());
+                    //        }
+                    //    }
+                    //}
                 }
             }
             catch (Exception ex)

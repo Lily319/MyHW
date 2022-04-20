@@ -19,7 +19,11 @@ namespace MyHW
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmLogon());
+            FrmLogon f = new FrmLogon();
+            if (f.ShowDialog() == DialogResult.OK)
+            {
+                Application.Run(new FrmMain());
+            }
         }
     }
 }
