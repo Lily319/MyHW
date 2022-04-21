@@ -88,10 +88,17 @@ namespace MyHomeWork
 
         private void button2_Click(object sender, EventArgs e)
         {
-            productPhotoTableAdapter.FillByOrderby(ADVWDataSet1.ProductPhoto, min, Max);
-            bindingSource1.DataSource = ADVWDataSet1.ProductPhoto;
-            dataGridView1.DataSource = bindingSource1;
-            bindingNavigator1.BindingSource = bindingSource1;
+            try
+            {
+                productPhotoTableAdapter.FillByOrderby(ADVWDataSet1.ProductPhoto, min, Max);
+                bindingSource1.DataSource = ADVWDataSet1.ProductPhoto;
+                dataGridView1.DataSource = bindingSource1;
+                bindingNavigator1.BindingSource = bindingSource1;
+            }
+            catch
+            {
+
+            }
         }
     }
 }

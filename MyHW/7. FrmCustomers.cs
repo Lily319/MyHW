@@ -63,9 +63,12 @@ namespace MyHW
             {
                 customersTableAdapter1.Fill(nwDataSet1.Customers);
                 listView1.Items.Clear();
+                Random r = new Random();
                 for (int i = 0; i < nwDataSet1.Customers.Rows.Count; i++)
                 {
                     ListViewItem lsv = listView1.Items.Add(nwDataSet1.Customers.Rows[i][0].ToString());
+                    lsv.ImageIndex = r.Next(0, this.ImageList2.Images.Count);
+                    listView1BackColor(lsv);
                     for (int j = 1; j < nwDataSet1.Customers.Columns.Count; j++)
                     {
                         lsv.SubItems.Add(nwDataSet1.Customers.Rows[i][j].ToString());
@@ -77,9 +80,12 @@ namespace MyHW
                 WhichCountry = comboBox1.Text;
                 listView1.Items.Clear();
                 customersTableAdapter1.FillByCountry(nwDataSet1.Customers, WhichCountry);
+                Random r = new Random();
                 for (int i = 0; i < nwDataSet1.Customers.Rows.Count; i++)
                 {
                     ListViewItem lsv = listView1.Items.Add(nwDataSet1.Customers.Rows[i][0].ToString());
+                    lsv.ImageIndex = r.Next(0, this.ImageList2.Images.Count);
+                    listView1BackColor(lsv);
                     for (int j = 1; j < nwDataSet1.Customers.Columns.Count; j++)
                     {
                         lsv.SubItems.Add(nwDataSet1.Customers.Rows[i][j].ToString());
@@ -111,9 +117,12 @@ namespace MyHW
             {
                 customersTableAdapter1.FillByOrderByID(nwDataSet1.Customers);
                 listView1.Items.Clear();
+                Random r = new Random();
                 for (int i = 0; i < nwDataSet1.Customers.Rows.Count; i++)
                 {
                     ListViewItem lsv = listView1.Items.Add(nwDataSet1.Customers.Rows[i][0].ToString());
+                    lsv.ImageIndex = r.Next(0, this.ImageList2.Images.Count);
+                    listView1BackColor(lsv);
                     for (int j = 1; j < nwDataSet1.Customers.Columns.Count; j++)
                     {
                         lsv.SubItems.Add(nwDataSet1.Customers.Rows[i][j].ToString());
@@ -124,9 +133,12 @@ namespace MyHW
             {
                 listView1.Items.Clear();
                 customersTableAdapter1.FillByC_OrderbyID(nwDataSet1.Customers, WhichCountry);
+                Random r = new Random();
                 for (int i = 0; i < nwDataSet1.Customers.Rows.Count; i++)
                 {
                     ListViewItem lsv = listView1.Items.Add(nwDataSet1.Customers.Rows[i][0].ToString());
+                    lsv.ImageIndex = r.Next(0, this.ImageList2.Images.Count);
+                    listView1BackColor(lsv);
                     for (int j = 1; j < nwDataSet1.Customers.Columns.Count; j++)
                     {
                         lsv.SubItems.Add(nwDataSet1.Customers.Rows[i][j].ToString());
@@ -141,9 +153,12 @@ namespace MyHW
             {
                 customersTableAdapter1.FillByIDDesc(nwDataSet1.Customers);
                 listView1.Items.Clear();
+                Random r = new Random();
                 for (int i = 0; i < nwDataSet1.Customers.Rows.Count; i++)
                 {
                     ListViewItem lsv = listView1.Items.Add(nwDataSet1.Customers.Rows[i][0].ToString());
+                    lsv.ImageIndex = r.Next(0, this.ImageList2.Images.Count);
+                    listView1BackColor(lsv);
                     for (int j = 1; j < nwDataSet1.Customers.Columns.Count; j++)
                     {
                         lsv.SubItems.Add(nwDataSet1.Customers.Rows[i][j].ToString());
@@ -154,14 +169,28 @@ namespace MyHW
             {
                 listView1.Items.Clear();
                 customersTableAdapter1.FillByC_IDDESC(nwDataSet1.Customers, WhichCountry);
+                Random r = new Random();
                 for (int i = 0; i < nwDataSet1.Customers.Rows.Count; i++)
                 {
                     ListViewItem lsv = listView1.Items.Add(nwDataSet1.Customers.Rows[i][0].ToString());
+                    lsv.ImageIndex = r.Next(0, this.ImageList2.Images.Count);
+                    listView1BackColor(lsv);
                     for (int j = 1; j < nwDataSet1.Customers.Columns.Count; j++)
                     {
                         lsv.SubItems.Add(nwDataSet1.Customers.Rows[i][j].ToString());
                     }
                 }
+            }
+        }
+        void listView1BackColor(ListViewItem lsv)
+        {
+            if (lsv.Index % 2 == 0)
+            {
+                lsv.BackColor = Color.AliceBlue;
+            }
+            else
+            {
+                lsv.BackColor = Color.MistyRose;
             }
         }
     }

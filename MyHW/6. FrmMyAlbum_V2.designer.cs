@@ -99,6 +99,9 @@ namespace MyHW
             this.cityTableAdapter1 = new MyHW.MyAlbumDataSetTableAdapters.CityTableAdapter();
             this.myAlbumTableAdapter1 = new MyHW.MyAlbumDataSetTableAdapters.MyAlbumTableAdapter();
             this.tableAdapterManager = new MyHW.MyAlbumDataSetTableAdapters.TableAdapterManager();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.myAlbumDataSet2 = new MyHW.MyAlbumDataSet();
+            this.bindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             cityIdLabel = new System.Windows.Forms.Label();
             cityNameLabel = new System.Windows.Forms.Label();
             idLabel = new System.Windows.Forms.Label();
@@ -131,6 +134,8 @@ namespace MyHW
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.myAlbumDataSet2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource2)).BeginInit();
             this.SuspendLayout();
             // 
             // cityIdLabel
@@ -783,6 +788,16 @@ namespace MyHW
             this.tableAdapterManager.MyAlbumTableAdapter = this.myAlbumTableAdapter1;
             this.tableAdapterManager.UpdateOrder = MyHW.MyAlbumDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
+            // timer1
+            // 
+            this.timer1.Interval = 750;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // myAlbumDataSet2
+            // 
+            this.myAlbumDataSet2.DataSetName = "MyAlbumDataSet";
+            this.myAlbumDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // FrmMyAlbum_V1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -824,6 +839,8 @@ namespace MyHW
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.myAlbumDataSet2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -893,5 +910,8 @@ namespace MyHW
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveNextItem;
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem;
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
+        private System.Windows.Forms.Timer timer1;
+        private MyAlbumDataSet myAlbumDataSet2;
+        private System.Windows.Forms.BindingSource bindingSource2;
     }
 }
