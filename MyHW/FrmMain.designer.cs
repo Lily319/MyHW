@@ -121,7 +121,7 @@ namespace MyHW
             this.btn2_1.BackColor = System.Drawing.Color.Plum;
             this.btn2_1.Font = new System.Drawing.Font("微軟正黑體", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.btn2_1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btn2_1.Location = new System.Drawing.Point(28, 65);
+            this.btn2_1.Location = new System.Drawing.Point(28, 75);
             this.btn2_1.Margin = new System.Windows.Forms.Padding(2);
             this.btn2_1.Name = "btn2_1";
             this.btn2_1.Size = new System.Drawing.Size(208, 28);
@@ -129,13 +129,15 @@ namespace MyHW
             this.btn2_1.Text = "NorthWind_連線";
             this.btn2_1.UseVisualStyleBackColor = false;
             this.btn2_1.Click += new System.EventHandler(this.btn2_1_Click);
+            this.btn2_1.MouseLeave += new System.EventHandler(this.button1_MouseLeave);
+            this.btn2_1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.button1_MouseMove);
             // 
             // btn2_2
             // 
             this.btn2_2.BackColor = System.Drawing.Color.Plum;
             this.btn2_2.Font = new System.Drawing.Font("微軟正黑體", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.btn2_2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btn2_2.Location = new System.Drawing.Point(28, 129);
+            this.btn2_2.Location = new System.Drawing.Point(28, 139);
             this.btn2_2.Margin = new System.Windows.Forms.Padding(2);
             this.btn2_2.Name = "btn2_2";
             this.btn2_2.Size = new System.Drawing.Size(208, 28);
@@ -143,13 +145,15 @@ namespace MyHW
             this.btn2_2.Text = "NorthWind_TableAdapter";
             this.btn2_2.UseVisualStyleBackColor = false;
             this.btn2_2.Click += new System.EventHandler(this.btn2_2_Click);
+            this.btn2_2.MouseLeave += new System.EventHandler(this.button1_MouseLeave);
+            this.btn2_2.MouseMove += new System.Windows.Forms.MouseEventHandler(this.button1_MouseMove);
             // 
             // btn2_3
             // 
             this.btn2_3.BackColor = System.Drawing.Color.Plum;
             this.btn2_3.Font = new System.Drawing.Font("微軟正黑體", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.btn2_3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btn2_3.Location = new System.Drawing.Point(28, 97);
+            this.btn2_3.Location = new System.Drawing.Point(28, 107);
             this.btn2_3.Margin = new System.Windows.Forms.Padding(2);
             this.btn2_3.Name = "btn2_3";
             this.btn2_3.Size = new System.Drawing.Size(208, 28);
@@ -157,13 +161,15 @@ namespace MyHW
             this.btn2_3.Text = "NorthWind_離線";
             this.btn2_3.UseVisualStyleBackColor = false;
             this.btn2_3.Click += new System.EventHandler(this.btn2_3_Click);
+            this.btn2_3.MouseLeave += new System.EventHandler(this.button1_MouseLeave);
+            this.btn2_3.MouseMove += new System.Windows.Forms.MouseEventHandler(this.button1_MouseMove);
             // 
             // btn6
             // 
             this.btn6.BackColor = System.Drawing.Color.Plum;
             this.btn6.Font = new System.Drawing.Font("微軟正黑體", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.btn6.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btn6.Location = new System.Drawing.Point(28, 310);
+            this.btn6.Location = new System.Drawing.Point(28, 331);
             this.btn6.Margin = new System.Windows.Forms.Padding(2);
             this.btn6.Name = "btn6";
             this.btn6.Size = new System.Drawing.Size(208, 28);
@@ -171,13 +177,15 @@ namespace MyHW
             this.btn6.Text = "MyAlbum_V2";
             this.btn6.UseVisualStyleBackColor = false;
             this.btn6.Click += new System.EventHandler(this.btn6_Click);
+            this.btn6.MouseLeave += new System.EventHandler(this.button1_MouseLeave);
+            this.btn6.MouseMove += new System.Windows.Forms.MouseEventHandler(this.button1_MouseMove);
             // 
             // btn3
             // 
             this.btn3.BackColor = System.Drawing.Color.Plum;
             this.btn3.Font = new System.Drawing.Font("微軟正黑體", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.btn3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btn3.Location = new System.Drawing.Point(28, 178);
+            this.btn3.Location = new System.Drawing.Point(28, 199);
             this.btn3.Margin = new System.Windows.Forms.Padding(2);
             this.btn3.Name = "btn3";
             this.btn3.Size = new System.Drawing.Size(208, 28);
@@ -185,13 +193,15 @@ namespace MyHW
             this.btn3.Text = "Products";
             this.btn3.UseVisualStyleBackColor = false;
             this.btn3.Click += new System.EventHandler(this.btn3_Click);
+            this.btn3.MouseLeave += new System.EventHandler(this.button1_MouseLeave);
+            this.btn3.MouseMove += new System.Windows.Forms.MouseEventHandler(this.button1_MouseMove);
             // 
             // btn5
             // 
             this.btn5.BackColor = System.Drawing.Color.Plum;
             this.btn5.Font = new System.Drawing.Font("微軟正黑體", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.btn5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btn5.Location = new System.Drawing.Point(28, 266);
+            this.btn5.Location = new System.Drawing.Point(28, 287);
             this.btn5.Margin = new System.Windows.Forms.Padding(2);
             this.btn5.Name = "btn5";
             this.btn5.Size = new System.Drawing.Size(208, 28);
@@ -199,13 +209,15 @@ namespace MyHW
             this.btn5.Text = "AdventureWorks";
             this.btn5.UseVisualStyleBackColor = false;
             this.btn5.Click += new System.EventHandler(this.btn5_Click);
+            this.btn5.MouseLeave += new System.EventHandler(this.button1_MouseLeave);
+            this.btn5.MouseMove += new System.Windows.Forms.MouseEventHandler(this.button1_MouseMove);
             // 
             // button2
             // 
             this.button2.BackColor = System.Drawing.Color.Plum;
             this.button2.Font = new System.Drawing.Font("微軟正黑體", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.button2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button2.Location = new System.Drawing.Point(28, 398);
+            this.button2.Location = new System.Drawing.Point(28, 419);
             this.button2.Margin = new System.Windows.Forms.Padding(2);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(208, 28);
@@ -213,13 +225,15 @@ namespace MyHW
             this.button2.Text = "TreeView";
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.button2.MouseLeave += new System.EventHandler(this.button1_MouseLeave);
+            this.button2.MouseMove += new System.Windows.Forms.MouseEventHandler(this.button1_MouseMove);
             // 
             // btn7
             // 
             this.btn7.BackColor = System.Drawing.Color.Plum;
             this.btn7.Font = new System.Drawing.Font("微軟正黑體", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.btn7.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btn7.Location = new System.Drawing.Point(28, 354);
+            this.btn7.Location = new System.Drawing.Point(28, 375);
             this.btn7.Margin = new System.Windows.Forms.Padding(2);
             this.btn7.Name = "btn7";
             this.btn7.Size = new System.Drawing.Size(208, 28);
@@ -227,13 +241,15 @@ namespace MyHW
             this.btn7.Text = "ListView";
             this.btn7.UseVisualStyleBackColor = false;
             this.btn7.Click += new System.EventHandler(this.btn7_Click);
+            this.btn7.MouseLeave += new System.EventHandler(this.button1_MouseLeave);
+            this.btn7.MouseMove += new System.Windows.Forms.MouseEventHandler(this.button1_MouseMove);
             // 
             // btn4
             // 
             this.btn4.BackColor = System.Drawing.Color.Plum;
             this.btn4.Font = new System.Drawing.Font("微軟正黑體", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.btn4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btn4.Location = new System.Drawing.Point(28, 222);
+            this.btn4.Location = new System.Drawing.Point(28, 243);
             this.btn4.Margin = new System.Windows.Forms.Padding(2);
             this.btn4.Name = "btn4";
             this.btn4.Size = new System.Drawing.Size(208, 28);
@@ -241,6 +257,8 @@ namespace MyHW
             this.btn4.Text = "DataSet 結構";
             this.btn4.UseVisualStyleBackColor = false;
             this.btn4.Click += new System.EventHandler(this.btn4_Click);
+            this.btn4.MouseLeave += new System.EventHandler(this.button1_MouseLeave);
+            this.btn4.MouseMove += new System.Windows.Forms.MouseEventHandler(this.button1_MouseMove);
             // 
             // button1
             // 
@@ -255,6 +273,8 @@ namespace MyHW
             this.button1.Text = "標準練習";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.button1.MouseLeave += new System.EventHandler(this.button1_MouseLeave);
+            this.button1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.button1_MouseMove);
             // 
             // FrmMain
             // 

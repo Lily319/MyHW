@@ -60,7 +60,18 @@ namespace MyHW
                 pb.SizeMode = PictureBoxSizeMode.Zoom;
                 this.flowLayoutPanel1.Controls.Add(pb);
                 pb.Click += Pb_Click;
+                pb.MouseLeave += Pb_MouseLeave;
+                pb.MouseMove += Pb_MouseMove;
             }
+        }
+        private void Pb_MouseLeave(object sender, EventArgs e)
+        {
+            ((PictureBox)sender).BackColor = Color.Transparent;
+        }
+
+        private void Pb_MouseMove(object sender, MouseEventArgs e)
+        {
+            ((PictureBox)sender).BackColor = Color.MistyRose;
         }
         private void Pb_Click(object sender, EventArgs e)
         {
@@ -175,16 +186,23 @@ namespace MyHW
             this.flowLayoutPanel3.Controls.Clear();
             for (int i = 0; i < myAlbumDataSet1.MyAlbum.Rows.Count; i++)
             {
-                PictureBox pb = new PictureBox();
                 byte[] bytes = myAlbumDataSet1.MyAlbum[i].Image;
                 System.IO.MemoryStream ms = new System.IO.MemoryStream(bytes);
+                PictureBox pb = new PictureBox();
                 pb.Image = Image.FromStream(ms);
-                pb.Width = 150;
-                pb.Height = 150;
-                pb.SizeMode = PictureBoxSizeMode.Zoom;
-                this.flowLayoutPanel3.Controls.Add(pb);
+                AddPbFormat(pb);
             }
         }
+        void AddPbFormat(PictureBox pb)
+        {
+            pb.Width = 150;
+            pb.Height = 150;
+            pb.SizeMode = PictureBoxSizeMode.Zoom;
+            this.flowLayoutPanel3.Controls.Add(pb);
+            pb.MouseMove += Pb_MouseMove;
+            pb.MouseLeave += Pb_MouseLeave;
+        }
+
         private void button1_Click(object sender, EventArgs e)//File...
         {
             if (comboBox1.Text == "請選擇城市")
@@ -202,14 +220,11 @@ namespace MyHW
                     image.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg);
                     byte[] bytes = ms.GetBuffer();
 
-                    myAlbumTableAdapter1.Insert(myAlbumDataSet2.City[0].CityId, openFileDialog1.SafeFileName, bytes);
+                    myAlbumTableAdapter1.Insert(myAlbumDataSet2.City[0].CityId, comboBox1.Text, bytes);
 
                     PictureBox pb = new PictureBox();
                     pb.Image = Image.FromStream(ms);
-                    pb.Width = 150;
-                    pb.Height = 150;
-                    pb.SizeMode = PictureBoxSizeMode.Zoom;
-                    this.flowLayoutPanel3.Controls.Add(pb);
+                    AddPbFormat(pb);
                 }
             }
         }
@@ -233,11 +248,8 @@ namespace MyHW
                         byte[] bytes = ms.GetBuffer();
                         myAlbumTableAdapter1.Insert(myAlbumDataSet2.City[0].CityId, comboBox1.Text, bytes);
                         PictureBox pb = new PictureBox();
-                        pb.Width = 150;
-                        pb.Height = 150;
-                        pb.SizeMode = PictureBoxSizeMode.Zoom;
                         pb.Image = Image.FromFile(files);
-                        this.flowLayoutPanel3.Controls.Add(pb);
+                        AddPbFormat(pb);
                     }
                 }
             }
@@ -266,10 +278,7 @@ namespace MyHW
                     myAlbumTableAdapter1.Insert(myAlbumDataSet2.City[0].CityId, comboBox1.Text, bytes);
                     PictureBox pb = new PictureBox();
                     pb.Image = Image.FromFile(files[i]);
-                    pb.SizeMode = PictureBoxSizeMode.Zoom;
-                    pb.Width = 150;
-                    pb.Height = 150;
-                    flowLayoutPanel3.Controls.Add(pb);
+                    AddPbFormat(pb);
                 }
             }
         }

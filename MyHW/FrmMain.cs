@@ -168,5 +168,15 @@ namespace MyHW
             f.Show();
             f.BringToFront();
         }
+
+        private void button1_MouseMove(object sender, MouseEventArgs e)
+        {
+            ((Button)sender).BackColor = Color.Thistle;
+        }
+
+        private void button1_MouseLeave(object sender, EventArgs e)
+        {
+            ((Button)sender).BackColor = Color.Plum;
+        }
     }
 }
