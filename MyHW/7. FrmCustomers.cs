@@ -21,7 +21,25 @@ namespace MyHW
             listView1.View = View.Details;
             LoadCountryToCombobox();
             CreateListViewColumns();
+            CreateListViewGroup();
         }
+
+        private void CreateListViewGroup()
+        {
+            try
+            {
+                customers1TableAdapter1.FillByAllCountry(nwDataSet1.Customers1);
+                for (int i = 0; i < nwDataSet1.Customers1.Rows.Count; i++)
+                {
+                    listView1.Groups.Add(nwDataSet1.Customers1.Rows[i][0].ToString(), nwDataSet1.Customers1.Rows[i][0].ToString());
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
         string AllCountry = "(All)";
         string WhichCountry;
         private void CreateListViewColumns()
@@ -73,6 +91,7 @@ namespace MyHW
                     {
                         lsv.SubItems.Add(nwDataSet1.Customers.Rows[i][j].ToString());
                     }
+                    lsv.Group = listView1.Groups[nwDataSet1.Customers.Rows[i]["Country"].ToString()];
                 }
             }
             else
@@ -90,6 +109,7 @@ namespace MyHW
                     {
                         lsv.SubItems.Add(nwDataSet1.Customers.Rows[i][j].ToString());
                     }
+                    lsv.Group = listView1.Groups[nwDataSet1.Customers.Rows[i]["Country"].ToString()];
                 }
             }
             listView1.AutoResizeColumns(ColumnHeaderAutoResizeStyle.ColumnContent);
@@ -127,6 +147,7 @@ namespace MyHW
                     {
                         lsv.SubItems.Add(nwDataSet1.Customers.Rows[i][j].ToString());
                     }
+                    lsv.Group = listView1.Groups[nwDataSet1.Customers.Rows[i]["Country"].ToString()];
                 }
             }
             else
@@ -143,6 +164,7 @@ namespace MyHW
                     {
                         lsv.SubItems.Add(nwDataSet1.Customers.Rows[i][j].ToString());
                     }
+                    lsv.Group = listView1.Groups[nwDataSet1.Customers.Rows[i]["Country"].ToString()];
                 }
             }
         }
@@ -163,6 +185,7 @@ namespace MyHW
                     {
                         lsv.SubItems.Add(nwDataSet1.Customers.Rows[i][j].ToString());
                     }
+                    lsv.Group = listView1.Groups[nwDataSet1.Customers.Rows[i]["Country"].ToString()];
                 }
             }
             else
@@ -179,6 +202,7 @@ namespace MyHW
                     {
                         lsv.SubItems.Add(nwDataSet1.Customers.Rows[i][j].ToString());
                     }
+                    lsv.Group = listView1.Groups[nwDataSet1.Customers.Rows[i]["Country"].ToString()];
                 }
             }
         }
